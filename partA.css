@@ -1,0 +1,13 @@
+h1 {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.partB_btn {
+  padding: 5px;
+  background-color: forestgreen;
+}
