@@ -11,3 +11,68 @@ a {
   padding: 5px;
   background-color: darkslateblue;
 }
+
+#playButton {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#gameRules {
+  text-align: center;
+}
+
+#timer {
+  text-align: center;
+}
+
+div#memory_board {
+  background: gainsboro;
+  border: black 1px solid;
+  width: 800px;
+  height: 540px;
+  padding: 24px;
+  margin: 0px auto;
+}
+
+div#memory_board > div {
+  background: url(tile_bg.jpg) no-repeat;
+  border: #000 1px solid;
+  width: 71px;
+  height: 71px;
+  float: left;
+  margin: 10px;
+  padding: 20px;
+  font-size: 64px;
+  cursor: pointer;
+  text-align: center;
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  -webkit-animation: mymove 120s;
+  -webkit-animation-play-state: paused;
+  animation: mymove 120s;
+  animation-play-state: paused;
+}
+
+@-webkit-keyframes mymove {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 100px;
+  }
+}
+
+@keyframes mymove {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 100px;
+  }
+}
