@@ -1,3 +1,6 @@
+let payroll_btn = document.getElementById("payroll_btn");
+let main_div = document.getElementById("main_div");
+
 function payrollCalculator() {
   let hours = []; // hours array containg each employee's hours worked
   let pay = []; // pay array containg each employee's pay roll
@@ -28,7 +31,38 @@ function payrollCalculator() {
 
     hours.push(hoursWorked); // each employee's working hours pushed to hours array
     pay.push(hoursWorked * hourlyRate); // each employee's payroll pushed to pay array
+
+    index++;
   }
+
+  let table = document.createElement("table");
+  let headerRow = table.insertRow();
+  let header1 = headerRow.insertCell();
+  let header2 = headerRow.insertCell();
+  let header3 = headerRow.insertCell();
+
+  header1.textContent = "Employee";
+  header2.textContent = "Hours";
+  header3.textContent = "Pay";
+
+  for (let i = 0; i < hours.length; i++) {
+    let row = table.insertRow();
+    let cell1 = row.insertCell();
+    let cell2 = row.insertCell();
+    let cell3 = row.insertCell();
+
+    cell1.textContent = i + 1;
+    cell2.textContent = hours[i];
+    cell3.textContent = pay[i];
+
+    totalPay += pay[i];
+  }
+
+  main_div.appendChild(table);
+
+  let summaryLine = document.createElement("p");
+  summaryLine.textContent = "Total pay of all employees: " + totalPay;
+  main_div.appendChild(summaryLine);
 }
 
-payrollCalculator();
+payroll_btn.addEventListener("click", payrollCalculator);
