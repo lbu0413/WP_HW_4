@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="testB.css" />
+  </head>
+  <body>
+    <button class="partA_btn"><a href="./partA.html">Go To Part A</a></button>
+    <h1>Puzzle Game</h1>
+    <div id="game-container">
+      <label for="num-cards">Number of Cards:</label>
+      <select id="num-cards">
+        <option value="8">8</option>
+        <option value="10">10</option>
+        <option value="12">12</option>
+      </select>
+      <label for="difficulty">Difficulty:</label>
+      <select id="difficulty">
+        <!-- Corrected id to "difficulty" -->
+        <option value="180">Easy</option>
+        <!-- 8 seconds -->
+        <option value="150">Normal</option>
+        <!-- 5 seconds -->
+        <option value="120">Hard</option>
+        <!-- 3 seconds -->
+      </select>
+      <button id="play-btn">Play Game</button>
+      <div id="timer"></div>
+    </div>
+
+    <section class="memory-game"></section>
+
+    <script src="testB.js"></script>
+  </body>
+</html>
