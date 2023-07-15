@@ -30,3 +30,10 @@ td {
   padding: 8px;
   text-align: center;
 }
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: whitesmoke;
+}
